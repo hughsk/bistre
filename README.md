@@ -38,6 +38,8 @@ bole.output({
 pretty.pipe(process.stdout)
 ```
 
+![bistre](http://imgur.com/SP38CCK.png)
+
 ## License
 
 MIT. See [LICENSE.md](http://github.com/hughsk/bistre/blob/master/LICENSE.md) for details.
