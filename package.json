@@ -1,0 +1,41 @@
+{
+  "name": "bistre",
+  "version": "0.0.0",
+  "main": "index.js",
+  "bin": {
+    "bistre": "./cli.js"
+  },
+  "scripts": {
+    "test": "node test"
+  },
+  "author": "Hugh Kennedy <hughskennedy@gmail.com> (http://hughsk.io/)",
+  "license": "MIT",
+  "dependencies": {
+    "chalk": "^0.4.0",
+    "split": "^0.3.0",
+    "stream-combiner": "^0.2.0",
+    "through2": "^0.4.1"
+  },
+  "devDependencies": {
+    "bole": "^0.1.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/hughsk/bistre.git"
+  },
+  "bugs": {
+    "url": "https://github.com/hughsk/bistre/issues"
+  },
+  "homepage": "https://github.com/hughsk/bistre",
+  "description": "A command-line tool and module for printing colourful bole logs.",
+  "keywords": [
+    "bole",
+    "log",
+    "pretty",
+    "print",
+    "ansi",
+    "cli",
+    "tool",
+    "colors"
+  ]
+}
