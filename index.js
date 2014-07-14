@@ -23,7 +23,11 @@ var levels = {
   , info: 'blue'
 }
 
-function bistre() {
+function bistre(opts) {
+
+  opts = opts || {}
+  var showTime = !!opts.time
+
   return combiner(split()
     , through2.obj(write)
   )
@@ -45,6 +49,9 @@ function bistre() {
       poolIndex[name] = pool[poolCount++ % pool.length]
     )
 
+    if (showTime) {
+      line.push(chalk.gray(data.time))
+    }
     line.push(chalk[level](pad(data.level, 5)))
     line.push(chalk[nameColor](data.name + ':'))
 
