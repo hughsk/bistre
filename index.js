@@ -32,10 +32,16 @@ function bistre(opts) {
     , through2.obj(write)
   )
 
-  function write(data, _, next) {
+  function safeparse(data) {
     try {
       data = JSON.parse(data)
-    } catch(e) {
+    } catch(e) { }
+    return data
+  }
+
+  function write(data, _, next) {
+    data = safeparse(data)
+    if (typeof data !== 'object') {
       this.push(data)
       this.push('\n')
       return next()
@@ -43,7 +49,7 @@ function bistre(opts) {
 
     var level = levels[data.level] || 'yellow'
     var line = []
-    var name = data.name.replace(/\:[-:a-z0-9]{8,}$/g, '')
+    var name = data.name ? data.name.replace(/\:[-:a-z0-9]{8,}$/g, '') : ''
 
     var nameColor = poolIndex[name] || (
       poolIndex[name] = pool[poolCount++ % pool.length]
