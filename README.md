@@ -40,6 +40,10 @@ pretty.pipe(process.stdout)
 
 ![bistre](http://imgur.com/SP38CCK.png)
 
+## See Also
+- [bole](https://github.com/rvagg/bole)
+- [debug-to-json](https://github.com/yoshuawuyts/debug-to-json)
+
 ## License
 
 MIT. See [LICENSE.md](http://github.com/hughsk/bistre/blob/master/LICENSE.md) for details.
