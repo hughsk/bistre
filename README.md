@@ -23,7 +23,7 @@ Install locally to use as a module:
 
 ### stream = bistre()
 
-Creates a transform stream that takes line-delimted JSON logs as input and
+Creates a transform stream that takes line-delimited JSON logs as input and
 outputs ANSI-highlighted logs for you.
 
 ``` javascript
